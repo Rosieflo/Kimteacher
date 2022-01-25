@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+@media screen and (max-width:767px) {
+
+    #box1{height: 2720px;}
+    #box1 > #intro, #box2 > #story, .app2, .f_box{width: 100%;}
+
+    /* swiper slide */
+    .main_slide{
+      width: 100%;
+      height: 670px;
+    }
+
+    /* toggle button */
+    label[for=toggle]{
+      font-size: 30px;
+      top:3px;
+      right: 12%;
+      display: block;
+      cursor:pointer;
+    }
+
+    #h_top1{
+      height: 30px;
+      position: fixed;
+      z-index: 1000;
+    }
+
+    /* 헤더 로고 */
+    h1 > a > img{
+        position: absolute;
+        top:12px;
+        left: 12%;
+        width: 80px;
+      }
+
+     /* 헤더 검색영역 */
+     input{
+        position: fixed;
+        top: 100px;
+        right: 8%;
+        width: 53%;
+        height: 34px;
+        z-index: 1005;
+        transition: 0.4s;
+        right: -100%;
+      }
+
+      i.fa-search{
+        top: 110px;
+        right: 13%;
+        font-size: 1.5rem;
+        z-index: 1006;
+        transition: 0.4s;
+        right: -100%;
+        position: fixed;
+      }
+
+    #h_top2{
+      top: 29px;
+      height: 60px;
+      position: fixed;
+    }
+
+    .h_lnb{
+        position: absolute;
+        right: 33%;
+        width: 40%;
+      }
+      .h_lnb > ul > li{line-height: 30px;}
+      .h_lnb > ul > li > a{
+        border-right: 1px solid #fff;
+        font-size: 0.8rem;
+        padding: 0px 34px;
+      }
+      .h_lnb > ul > li > a:hover{
+        border-bottom:none;
+      }
+
+      .h_lnb li:last-child a{
+        border: none;
+        padding-right: 0px;
+      }
+  
+      /* 오른쪽에서 날아오는 서브메뉴 */
+      .h_gnb{
+        width:70%;
+        height:100%;
+        padding:170px 6% 0px 6%;
+        box-sizing: border-box;
+        background-color:rgba(0,0,0,.9);
+        position:fixed;
+          top:0px;
+          right:0px;
+        z-index:1004;
+        transition: 0.4s;
+        right:-100%;
+      }
+      .h_gnb a{color:#ccc;}
+      .h_gnb > ul{
+        flex-direction:column;
+      }
+      .h_gnb > ul > li{border-bottom: 1px solid rgb(95, 95, 95);}
+      #h_top2 > .h_gnb > ul > li > a{
+        font-size: 1.3rem;
+      }
+
+     
+        /* 전체메뉴 터치시 서브메뉴 나오게 하기 */
+        #toggle:checked ~ header > #h_top2 .h_gnb{right: 0px;}
+        #toggle:checked ~ header > .search_box input{right: 40px;}
+        #toggle:checked ~ header > .search_box i.fa-search{right: 56px;}
+        #toggle:checked ~ header > #h_top2 label.fa-times{right: 40px;}
+
+        .h_gnb > ul > li:hover .sub{display:none;}
+
+        /* 서브 닫기 버튼 */
+        label.fa-times{
+          display:inline-block;
+          position:fixed;
+          z-index:1005;
+          transform:translate(10px, 18px);
+          font-size:2.3rem;
+          color:#fff;
+          cursor:pointer;
+          transition: 0.4s;
+          right: -100%;
+        }
+
+        /* Top 버튼 */
+        aside{display: none;}
+
+    /* 메뉴소개 */
+        /* contents title */
+        #box1 > #intro > p, #box2 > #story > p, #box3 > #store > p{
+          top: 36px;
+          left: 5%;
+          font-size: 1.4rem;
+        }
+        /* contents height */
+        #box2 > #story > ul, #box3 > #store > ul{
+          top: 90px;
+        }
+    #box1 > #intro{
+      width: 100%;
+    }
+    #box1 > #intro > ul{
+      display:block;
+      position: absolute;
+      top: 90px;
+    }
+    #box1 > #intro > ul > li{      
+      float:left;
+      width: 50%;
+      padding-bottom: 40px;
+    }
+    #box1 > #intro > ul > li > a > img{
+      width: 100%; height: 100%;
+    }
+    #box1 > #intro > ul > li > .txt00{
+      position: static;
+      padding: 8px 0;
+      font-size: 1.2rem;
+      margin-left: 6%;
+    }
+    #box1 > #intro > ul > li > .txt01{
+      position: static;
+      font-size: 0.9rem;
+      margin-left: 6%;
+    }
+
+    /* 바르다 이야기 */
+    #box2{
+      position: relative;
+      top: 290px;
+      height: 740px;
+    }
+
+    #box2 > #story{
+      width: 100%;
+    }
+    #box2 > #story > ul{
+      display:block;
+      position: absolute;
+      top: 90px;
+    }
+    #box2 > #story > ul > li{      
+      float:left;
+      width: 50%;
+      padding-bottom: 14px;
+    }
+    #box2 > #story > ul > li > a > img{
+      width: 100%; height: 100%;
+    }
+    #box2 > #story > ul > li > .txt01{
+      position: static;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      margin-left: 6%;
+    }
+
+    /* app */
+    #app1{
+      position: relative;
+      top:280px;
+      height: 252px;
+    }
+    
+    .app2{
+      height: 240px;
+    }
+    .app2 > p{
+      top: 60px;
+      left: 11%;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .app3{
+      top: 30px;
+      left: 31%;
+      width: 140px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.1rem;
+    }
+    .app4{
+      bottom: 24px;
+      right: 24%;
+    }
+    .app4 > a > img{
+      width: 70px;
+      padding: 0px 8px;
+    }
+    #box2 > #story > ul > li > .txt01{font-size: 0.8rem;}
+
+    /* 가맹안내 */
+    #box3{
+      position: relative;
+      top: 280px;
+      width: 100%;
+    }
+    #box3 > #store > ul{display: block;}
+    #store > ul > li > a > img{
+      width: 100%;
+      margin-bottom: 28px;
+    }
+    #store > ul > li:first-child > h3{
+      position: absolute;
+      top:122px;
+      left: 28px;
+      width: 270px;
+    }
+    #store > ul > li:last-child > h3{
+      position: absolute;
+      bottom:176px;
+      left: 28px;
+      width: 270px;
+    }
+    .txt02{top: 164px;}
+    .txt03{top: 240px;}
+    .txt04{
+      left: 28px;
+      width: 240px;
+      bottom: 120px;
+    }
+    .txt05{
+      left: 28px;
+      width: 240px;
+      bottom: 62px;
+    }
+
+  
+    /* 푸터영역 */
+    .f_box{
+      height: 380px;
+    }
+    .f_logo{
+      width: 110px;
+      left: 7.2%;
+      top: 26px;
+    }
+    .f_lnb{
+      font-size: 0.8rem;
+      left: 6%;
+      top: 166px;
+      width: 100%;
+    }
+    .f_lnb li a{
+      padding:0px 12px;
+    }
+    .f_con, .f_info{font-size: 0.6rem;}
+    .f_con{
+      bottom: 110px;
+      left: 8.5%;
+    }
+    .f_info{
+      bottom: 30px;
+      left: 8.5%;
+    }
+    .sns{
+      position: absolute;
+      bottom:398px;
+      right: 7%;
+    }
+}
